@@ -1,6 +1,6 @@
 # Build [7-Zip](https://sourceforge.net/projects/sevenzip/files/7-Zip/) for macOS
 
-macOS version min: 10.13
+macOS version min: 10.14
 
 Supported archs: `arm64`, `x86_64`
 
@@ -13,5 +13,5 @@ Supported archs: `arm64`, `x86_64`
 Or
 
 ```
-./build.sh 21.07
+./build.sh 24.08
 ```
