@@ -24,7 +24,7 @@ fi
 pushd CPP/7zip/Bundles/Alone
 
 export SDKROOT=`xcrun --sdk macosx --show-sdk-path`
-export MACOSX_DEPLOYMENT_TARGET=10.13
+export MACOSX_DEPLOYMENT_TARGET=10.15
 
 make -j -f ../../cmpl_mac_arm64.mak
 make -j -f ../../cmpl_mac_x64.mak
