@@ -4,7 +4,7 @@ set -e
 
 version=$1
 if [ "$version" = "" ]; then
-  version=21.07
+  version=24.08
 fi
 
 # Remove all dots
@@ -21,7 +21,7 @@ else
   pushd .
 fi
 
-pushd CPP/7zip/Bundles/Alone2
+pushd CPP/7zip/Bundles/Alone
 
 export SDKROOT=`xcrun --sdk macosx --show-sdk-path`
 export MACOSX_DEPLOYMENT_TARGET=10.13
@@ -29,11 +29,11 @@ export MACOSX_DEPLOYMENT_TARGET=10.13
 make -j -f ../../cmpl_mac_arm64.mak
 make -j -f ../../cmpl_mac_x64.mak
 
-lipo -create b/m_arm64/7zz b/m_x64/7zz -output b/7zz
-lipo -archs b/7zz
-otool -L b/7zz
+lipo -create b/m_arm64/7za b/m_x64/7za -output b/7za
+lipo -archs b/7za
+otool -L b/7za
 
-b/7zz --help
+b/7za --help
 
 popd
 
