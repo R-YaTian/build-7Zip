@@ -20,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: 7za_2408_macOS
-          path: 7z24.08-src/CPP/7zip/Bundles/Alone/b/7za
+          path: 7z2408-src/CPP/7zip/Bundles/Alone/b/
