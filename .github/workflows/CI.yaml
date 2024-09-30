@@ -1,4 +1,4 @@
-name: "7-Zip CI"
+name: "7za Build"
 on: 
   push:
     branches:
@@ -9,11 +9,15 @@ on:
       - '*'
 jobs:
   macOS:
-    name: Build on  macOS
+    name: Build on macOS
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Build
         run: ./build.sh
-
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: 7za_2408_macOS
+          path: 7z24.08-src/CPP/7zip/Bundles/Alone/b/7za
